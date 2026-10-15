@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="پوشش ایران | نبض ایران؛ خبرهای ایران و جهان با ذکر منبع، زمان انتشار و تفکیک خبر از ادعا. بدون حمایت سیاسی از شخصی.">
+  <meta name="theme-color" content="#c92735">
+  <meta property="og:title" content="پوشش ایران | نبض ایران">
+  <meta property="og:description" content="خبر، بدون حمایت سیاسی از شخصی">
+  <title>پوشش ایران | نبض ایران</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">ن</div>
+    <div><div class="brand-name" data-fa="پوشش ایران" data-en="Iran Coverage">پوشش ایران</div>
+    <div class="brand-tag" data-fa="نبض ایران · بدون حمایت سیاسی از شخصی" data-en="Iran Pulse · No political endorsement">نبض ایران · بدون حمایت سیاسی از شخصی</div></div>
+  </div>
+  <div class="header-actions">
+    <button id="langBtn" class="small-btn" aria-label="Change language">EN</button>
+    <button id="themeBtn" class="small-btn" data-fa="☾ تم" data-en="☾ Theme">☾ تم</button>
+  </div>
+</header>
+<nav class="ticker" aria-label="Breaking news">
+  <span class="ticker-label" data-fa="آخرین به‌روزرسانی" data-en="LAST UPDATE">آخرین به‌روزرسانی</span>
+  <span id="lastUpdated">در حال بررسی داده‌ها…</span>
+  <span class="refresh-note" data-fa="به‌روزرسانی خودکار هر ۱۰ دقیقه" data-en="Automatic refresh every 10 minutes">به‌روزرسانی خودکار هر ۱۰ دقیقه</span>
+</nav>
+<main class="container">
+  <section class="intro">
+    <div>
+      <p class="eyebrow" data-fa="خبرها بر پایهٔ منبع" data-en="SOURCE-LED REPORTING">خبرها بر پایهٔ منبع</p>
+      <h1 data-fa="ایران و جهان؛ به ترتیب زمان" data-en="Iran and the world, by time">ایران و جهان؛ به ترتیب زمان</h1>
+      <p class="subhead" data-fa="خلاصهٔ خبرها، پیوند منبع اصلی و زمان انتشار؛ ادعاها از واقعیت‌های تأییدشده جدا می‌شوند." data-en="News summaries with original-source links and timestamps. Claims are distinguished from verified facts.">خلاصهٔ خبرها، پیوند منبع اصلی و زمان انتشار؛ ادعاها از واقعیت‌های تأییدشده جدا می‌شوند.</p>
+    </div>
+    <div class="live-chip"><span class="pulse"></span><span data-fa="خبرخوان" data-en="NEWS FEED">خبرخوان</span></div>
+  </section>
+  <section class="tools" aria-label="News filters">
+    <label class="searchbox"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="جست‌وجو در خبرها…" data-ph-fa="جست‌وجو در خبرها…" data-ph-en="Search stories…" aria-label="Search news"></label>
+    <select id="categorySelect" aria-label="Category">
+      <option value="all" data-fa="همهٔ دسته‌ها" data-en="All categories">همهٔ دسته‌ها</option>
+      <option value="iran" data-fa="ایران" data-en="Iran">ایران</option>
+      <option value="world" data-fa="جهان" data-en="World">جهان</option>
+      <option value="economy" data-fa="اقتصاد" data-en="Economy">اقتصاد</option>
+      <option value="conflict" data-fa="جنگ و امنیت" data-en="Conflict & security">جنگ و امنیت</option>
+      <option value="diplomacy" data-fa="دیپلماسی" data-en="Diplomacy">دیپلماسی</option>
+      <option value="rights" data-fa="حقوق بشر" data-en="Human rights">حقوق بشر</option>
+    </select>
+  </section>
+  <section class="status-line">
+    <span id="resultCount">—</span>
+    <span data-fa="تازه‌ترین خبرها اول نمایش داده می‌شوند" data-en="Newest stories appear first">تازه‌ترین خبرها اول نمایش داده می‌شوند</span>
+  </section>
+  <section id="newsList" class="news-list" aria-live="polite">
+    <article class="empty-state"><div class="loader"></div><h2 data-fa="خبرها در حال بارگذاری‌اند" data-en="Loading stories">خبرها در حال بارگذاری‌اند</h2><p data-fa="اگر سایت تازه راه‌اندازی شده، چند دقیقه بعد دوباره بررسی کن." data-en="If this site has just launched, check back in a few minutes.">اگر سایت تازه راه‌اندازی شده، چند دقیقه بعد دوباره بررسی کن.</p></article>
+  </section>
+  <section class="method">
+    <h2 data-fa="روش کار و شفافیت" data-en="Method & transparency">روش کار و شفافیت</h2>
+    <p data-fa="این سایت خلاصهٔ کوتاه خبرها و پیوند منابع را نمایش می‌دهد. وجود خبر در این صفحه به‌تنهایی به معنی تأیید مستقل آن نیست. گزارش‌های حساس، ادعاهای طرف‌های درگیر و اطلاعاتی که هنوز مستقلاً تأیید نشده‌اند باید با برچسب مناسب خوانده شوند." data-en="This site displays short summaries and source links. Inclusion here does not itself mean independent verification. Sensitive reports, claims by parties to a conflict, and information not independently confirmed should be labeled accordingly.">این سایت خلاصهٔ کوتاه خبرها و پیوند منابع را نمایش می‌دهد. وجود خبر در این صفحه به‌تنهایی به معنی تأیید مستقل آن نیست. گزارش‌های حساس، ادعاهای طرف‌های درگیر و اطلاعاتی که هنوز مستقلاً تأیید نشده‌اند باید با برچسب مناسب خوانده شوند.</p>
+    <p class="method-small" data-fa="خبرها از خوراک‌های عمومی RSS دریافت می‌شوند. برای اصلاح یا گزارش خطا، اطلاعات تماس ناشر را در نسخهٔ نهایی اضافه کنید." data-en="Stories are collected from public RSS feeds. Add publisher contact details to the production version for corrections and error reports.">خبرها از خوراک‌های عمومی RSS دریافت می‌شوند. برای اصلاح یا گزارش خطا، اطلاعات تماس ناشر را در نسخهٔ نهایی اضافه کنید.</p>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> پوشش ایران | نبض ایران</span><span data-fa="منبع را بخوان؛ خبر را بررسی کن." data-en="Read the source. Verify the story.">منبع را بخوان؛ خبر را بررسی کن.</span></footer>
+<script src="app.js" defer></script>
+</body>
+</html>
